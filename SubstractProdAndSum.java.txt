@@ -1,0 +1,16 @@
+class Solution {
+    public int subtractProductAndSum(int n) {
+        int product=1,sum=0,result=0;
+        int reminder=0;
+        while(n>0)
+        {
+            reminder=n%10;
+            //result=(result*10)+reminder;
+            product=product*reminder;
+            sum=sum+reminder;
+            n= n/10;
+        }
+        result=product-sum;
+        return result;
+    }
+}
